@@ -1,11 +1,87 @@
-<!-- index.html -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Welcome to PakCircuits</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PakCircuits - Smart Electronics Solutions</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background-color: #f8f9fa;
+      color: #212529;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background-color: #004080;
+      color: white;
+      padding: 1.5rem 2rem;
+      text-align: center;
+    }
+    header h1 {
+      margin-bottom: 0.5rem;
+    }
+    nav {
+      background-color: #003366;
+      text-align: center;
+      padding: 0.5rem 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      flex: 1;
+      padding: 2rem;
+      text-align: center;
+    }
+    footer {
+      background-color: #004080;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Hello from PakCircuits!</h1>
-  <p>This website is hosted using GitHub Pages.</p>
+  <header>
+    <h1>PakCircuits</h1>
+    <p>Smart Electronics | Embedded Systems | IoT Solutions</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Projects</a>
+    <a href="#">About Us</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <main>
+    <h2>Welcome to PakCircuits!</h2>
+    <p>We specialize in embedded design, prototyping, and real-world smart electronics solutions.</p>
+    <p>Stay tuned for amazing projects and tutorials.</p>
+  </main>
+
+  <footer>
+    &copy; 2025 PakCircuits. All rights reserved.
+  </footer>
 </body>
 </html>
+
