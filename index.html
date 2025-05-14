@@ -6,45 +6,61 @@
   <title>PakCircuits - FPGA, DSP & Embedded Solutions</title>
   <style>
     body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: url('bg.png') no-repeat center center fixed;
-  background-size: cover;
-  color: #fff;
-  <div style="position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: -1;"></div>
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('bg.png') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      position: relative;
+    }
 
- }
-
+    /* Dark overlay for readability */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: -1;
+    }
 
     header {
-      background: linear-gradient(to right, #002b80, #004080);
-      color: white;
-      padding: 2rem 1rem;
       text-align: center;
+      padding: 2rem 1rem;
     }
 
     header h1 {
+      font-size: 3rem;
       margin-bottom: 0.5rem;
+      color: #00d1ff;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #ccc;
     }
 
     nav {
-      background: #003366;
+      background: rgba(0, 0, 50, 0.85);
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       padding: 0.8rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
 
     nav a {
-      color: white;
+      color: #00d1ff;
       text-decoration: none;
       margin: 0 15px;
       padding: 0.5rem 0;
       font-weight: bold;
+      transition: color 0.3s ease;
     }
 
     nav a:hover {
-      text-decoration: underline;
+      color: #fff;
     }
 
     section {
@@ -54,12 +70,11 @@
     }
 
     section h2 {
-      color: #004080;
+      color: #00d1ff;
       margin-bottom: 1rem;
-    }
-
-    .services, .learning Center, .projects, .about {
-      margin-bottom: 3rem;
+      border-bottom: 2px solid #00d1ff;
+      display: inline-block;
+      padding-bottom: 5px;
     }
 
     .grid {
@@ -69,22 +84,30 @@
     }
 
     .card {
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
       padding: 1rem;
       text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      color: #fff;
+      border: 1px solid #00d1ff44;
     }
 
     .card:hover {
-      box-shadow: 0 0 15px rgba(0,0,0,0.15);
+      transform: scale(1.03);
+      box-shadow: 0 4px 20px rgba(0, 209, 255, 0.2);
     }
 
     footer {
-      background: #002b80;
-      color: white;
+      background: rgba(0, 0, 50, 0.9);
+      color: #ccc;
       text-align: center;
       padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    a {
+      color: #00d1ff;
     }
   </style>
 </head>
@@ -106,7 +129,7 @@
   <section id="vision">
     <h2>Vision & Mission</h2>
     <p><strong>Vision:</strong> To become a leading provider of innovative and efficient digital solutions in the fields of Digital Signal Processing, FPGA Design, and Embedded Systems, while also empowering engineering students through high-quality tutorials, practical guides, and ready-to-use academic and industrial projects.</p>
-    <p><strong>Mission:</strong> Our mission is to deliver advanced digital solutions for industry while empowering students with practical learning, expert tutorials, and ready-to-use engineering projects that bridge the gap between theory and real-world application.</p>
+    <p><strong>Mission:</strong> "Our mission is to deliver advanced digital solutions for industry while empowering students with practical learning, expert tutorials, and ready-to-use engineering projects that bridge the gap between theory and real-world application."</p>
   </section>
 
   <section id="services" class="services">
@@ -149,7 +172,7 @@
     <h2>About Us</h2>
     <p>PakCircuits is founded by an FPGA design engineer with strong expertise in Verilog, DSP, and embedded systems. We aim to bridge the gap between academia and industry with high-quality engineering content and services.</p>
     <p>📍 <strong>Location:</strong> Lahore, Pakistan</p>
-    <p>📧 <strong>Email:</strong> info@pakcircuits.com</p>
+    <p>📧 <strong>Email:</strong> <a href="mailto:info@pakcircuits.com">info@pakcircuits.com</a></p>
     <p><strong>Team:</strong> We’re a growing group of passionate engineers committed to building and sharing knowledge.</p>
   </section>
 
