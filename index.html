@@ -1,87 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PakCircuits - Smart Electronics Solutions</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PakCircuits - FPGA, DSP & Embedded Solutions</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
     body {
-      background-color: #f8f9fa;
-      color: #212529;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f7fa;
+      color: #333;
     }
+
     header {
-      background-color: #004080;
+      background: linear-gradient(to right, #002b80, #004080);
       color: white;
-      padding: 1.5rem 2rem;
+      padding: 2rem 1rem;
       text-align: center;
     }
+
     header h1 {
       margin-bottom: 0.5rem;
     }
+
     nav {
-      background-color: #003366;
-      text-align: center;
-      padding: 0.5rem 0;
+      background: #003366;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0.8rem;
     }
+
     nav a {
       color: white;
       text-decoration: none;
       margin: 0 15px;
+      padding: 0.5rem 0;
       font-weight: bold;
     }
+
     nav a:hover {
       text-decoration: underline;
     }
-    main {
-      flex: 1;
+
+    section {
       padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section h2 {
+      color: #004080;
+      margin-bottom: 1rem;
+    }
+
+    .services, .learning, .projects, .about {
+      margin-bottom: 3rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      padding: 1rem;
       text-align: center;
     }
+
+    .card:hover {
+      box-shadow: 0 0 15px rgba(0,0,0,0.15);
+    }
+
     footer {
-      background-color: #004080;
+      background: #002b80;
       color: white;
       text-align: center;
       padding: 1rem;
-    }
-    @media (max-width: 600px) {
-      nav a {
-        display: block;
-        margin: 10px 0;
-      }
     }
   </style>
 </head>
 <body>
   <header>
     <h1>PakCircuits</h1>
-    <p>Smart Electronics | Embedded Systems | IoT Solutions</p>
+    <p>FPGA Design Engineer | DSP Specialist | Verilog | Vivado | Signal Processing</p>
   </header>
 
   <nav>
     <a href="#">Home</a>
-    <a href="#">Projects</a>
-    <a href="#">About Us</a>
-    <a href="#">Contact</a>
+    <a href="#vision">Vision & Mission</a>
+    <a href="#services">Services</a>
+    <a href="#learning">Learning</a>
+    <a href="#projects">Projects</a>
+    <a href="#about">About Us</a>
   </nav>
 
-  <main>
-    <h2>Welcome to PakCircuits!</h2>
-    <p>We specialize in embedded design, prototyping, and real-world smart electronics solutions.</p>
-    <p>Stay tuned for amazing projects and tutorials.</p>
-  </main>
+  <section id="vision">
+    <h2>Vision & Mission</h2>
+    <p><strong>Vision:</strong> To be the leading provider of innovative FPGA and DSP solutions for academia and industry.</p>
+    <p><strong>Mission:</strong> Deliver affordable, practical and powerful digital design resources through tutorials, projects and engineering services.</p>
+  </section>
+
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="grid">
+      <div class="card">Digital Signal Processing (DSP)</div>
+      <div class="card">FPGA Design & Prototyping</div>
+      <div class="card">Verilog/VHDL Development</div>
+      <div class="card">Processor & Filter Design</div>
+      <div class="card">VLSI-Based Solutions</div>
+      <div class="card">Custom Embedded Projects</div>
+    </div>
+  </section>
+
+  <section id="learning" class="learning">
+    <h2>Learning Center</h2>
+    <p>Explore folders below for tutorials, code samples and engineering guides:</p>
+    <div class="grid">
+      <div class="card">DSP Tutorials</div>
+      <div class="card">FPGA Guides</div>
+      <div class="card">Verilog Examples</div>
+      <div class="card">Vivado Projects</div>
+      <div class="card">Filter Design Walkthroughs</div>
+    </div>
+    <p style="text-align: center; margin-top: 1rem;"><em>You can upload PDFs, images, videos, and code files into these sections later.</em></p>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2>Open Source Projects</h2>
+    <p>Ready-made, open-source, and purchasable FPGA and DSP projects for students and companies.</p>
+    <div class="grid">
+      <div class="card">Digital FIR Filter (Verilog)</div>
+      <div class="card">UART Interface using FPGA</div>
+      <div class="card">Real-time Signal Classifier</div>
+      <div class="card">Image Processing on FPGA</div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>PakCircuits is founded by an FPGA design engineer with strong expertise in Verilog, DSP, and embedded systems. We aim to bridge the gap between academia and industry with high-quality engineering content and services.</p>
+    <p>📍 <strong>Location:</strong> Lahore, Pakistan</p>
+    <p>📧 <strong>Email:</strong> info@pakcircuits.com</p>
+    <p><strong>Team:</strong> We’re a growing group of passionate engineers committed to building and sharing knowledge.</p>
+  </section>
 
   <footer>
     &copy; 2025 PakCircuits. All rights reserved.
   </footer>
 </body>
 </html>
-
