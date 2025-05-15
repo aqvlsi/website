@@ -2,128 +2,197 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pak Circuits - Firebase Auth</title>
-  <link rel="stylesheet" href="https://picocss.com/docs/css/pico.min.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PakCircuits - FPGA, DSP & Embedded Solutions</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('bg.png') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      position: relative;
+    }
+
+    /* Dark overlay for readability */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: -1;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      color: #00d1ff;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+
+    nav {
+      background: rgba(0, 0, 50, 0.85);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0.8rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: #00d1ff;
+      text-decoration: none;
+      margin: 0 15px;
+      padding: 0.5rem 0;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section h2 {
+      color: #00d1ff;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #00d1ff;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 1rem;
+      text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      color: #fff;
+      border: 1px solid #00d1ff44;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 4px 20px rgba(0, 209, 255, 0.2);
+    }
+
+    footer {
+      background: rgba(0, 0, 50, 0.9);
+      color: #ccc;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    a {
+      color: #00d1ff;
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>PakCircuits</h1>
+    <p>FPGA Design Engineer | DSP Specialist | Verilog | Vivado | Signal Processing</p>
+  </header>
 
-<header class="container">
-  <h1>Pak Circuits</h1>
   <nav>
-    <ul>
-      <li><strong>Home</strong></li>
-      <li><a href="#">Projects</a></li>
-      <li><a href="#">Tutorials</a></li>
-      <li><a href="#">About</a></li>
-    </ul>
+    <a href="#">Home</a>
+    <a href="#vision">Vision & Mission</a>
+    <a href="#services">Services</a>
+    <a href="#learning">Learning</a>
+    <a href="#projects">Projects</a>
+    <a href="#about">About Us</a>
   </nav>
-</header>
 
-<main class="container">
-  <h2>Welcome to Pak Circuits</h2>
-  <p>Explore electronics projects, tutorials, and more!</p>
+  <section id="vision">
+    <h2>Vision & Mission</h2>
+    <p><strong>Vision:</strong> To become a leading provider of innovative and efficient digital solutions in the fields of Digital Signal Processing, FPGA Design, and Embedded Systems, while also empowering engineering students through high-quality tutorials, practical guides, and ready-to-use academic and industrial projects.</p>
+    <p><strong>Mission:</strong> "Our mission is to deliver advanced digital solutions for industry while empowering students with practical learning, expert tutorials, and ready-to-use engineering projects that bridge the gap between theory and real-world application."</p>
+  </section>
 
-  <section>
-    <h2>User Login / Signup</h2>
+  <section id="services" class="services">
+    <h2>Our Services</h2>
     <div class="grid">
-      <!-- Signup Form -->
-      <div class="card">
-        <h3>Sign Up</h3>
-        <input type="email" id="signup-email" placeholder="Email" />
-        <input type="password" id="signup-password" placeholder="Password" />
-        <button onclick="signup()">Sign Up</button>
-      </div>
-
-      <!-- Login Form -->
-      <div class="card">
-        <h3>Login</h3>
-        <input type="email" id="login-email" placeholder="Email" />
-        <input type="password" id="login-password" placeholder="Password" />
-        <button onclick="login()">Login</button>
-      </div>
-
-      <!-- Status / Logout -->
-      <div class="card">
-        <h3>Status</h3>
-        <p id="auth-status">Checking...</p>
-        <button onclick="logout()">Logout</button>
-      </div>
+      <div class="card">Digital Signal Processing (DSP)</div>
+      <div class="card">FPGA Design & Prototyping</div>
+      <div class="card">Verilog/VHDL Development</div>
+      <div class="card">Processor & Filter Design</div>
+      <div class="card">VLSI-Based Solutions</div>
+      <div class="card">Custom Embedded Projects</div>
     </div>
   </section>
-</main>
 
-<footer class="container">
-  <small>&copy; 2025 Pak Circuits. All rights reserved.</small>
-</footer>
+  <section id="learning" class="learning">
+    <h2>Learning Center</h2>
+    <p>Explore folders below for tutorials, code samples and engineering guides:</p>
+    <div class="grid">
+      <div class="card">DSP Tutorials</div>
+      <div class="card">FPGA Guides</div>
+      <div class="card">Verilog Examples</div>
+      <div class="card">Vivado Projects</div>
+      <div class="card">Filter Design Walkthroughs</div>
+    </div>
+    <p style="text-align: center; margin-top: 1rem;"><em>You can upload PDFs, images, videos, and code files into these sections later.</em></p>
+  </section>
 
-<!-- Firebase Scripts -->
-<script type="module">
-  // Firebase SDK
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.7.3/firebase-app.js";
-  import {
-    getAuth,
-    createUserWithEmailAndPassword,
-    signInWithEmailAndPassword,
-    signOut,
-    onAuthStateChanged
-  } from "https://www.gstatic.com/firebasejs/11.7.3/firebase-auth.js";
+  <section id="projects" class="projects">
+    <h2>Open Source Projects</h2>
+    <p>Ready-made, open-source, and purchasable FPGA and DSP projects for students and companies.</p>
+    <div class="grid">
+      <div class="card">Digital FIR Filter (Verilog)</div>
+      <div class="card">UART Interface using FPGA</div>
+      <div class="card">Real-time Signal Classifier</div>
+      <div class="card">Image Processing on FPGA</div>
+    </div>
+  </section>
 
-  // Your Firebase config
-  const firebaseConfig = {
-    apiKey: "AIzaSyBm6bPIqG_IbI_MQAt9k9X1IVPTbe0_hZs",
-    authDomain: "authweb-591a3.firebaseapp.com",
-    projectId: "authweb-591a3",
-    storageBucket: "authweb-591a3.appspot.com",
-    messagingSenderId: "598690765116",
-    appId: "1:598690765116:web:840345415f07d41c6c2639",
-    measurementId: "G-90GDFQGFHR"
-  };
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>PakCircuits is founded by an FPGA design engineer with strong expertise in Verilog, DSP, and embedded systems. We aim to bridge the gap between academia and industry with high-quality engineering content and services.</p>
+    <p>📍 <strong>Location:</strong> Lahore, Pakistan</p>
+    <p>📧 <strong>Email:</strong> <a href="mailto:info@pakcircuits.com">info@pakcircuits.com</a></p>
+    <p><strong>Team:</strong> We’re a growing group of passionate engineers committed to building and sharing knowledge.</p>
+  </section>
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const auth = getAuth(app);
+  <footer>
+    &copy; 2025 PakCircuits. All rights reserved.
+  </footer>
 
-  // Signup function
-  window.signup = async function () {
-    const email = document.getElementById("signup-email").value;
-    const password = document.getElementById("signup-password").value;
-    try {
-      await createUserWithEmailAndPassword(auth, email, password);
-      alert("✅ Signup successful");
-    } catch (error) {
-      alert("❌ " + error.message);
-    }
-  };
-
-  // Login function
-  window.login = async function () {
-    const email = document.getElementById("login-email").value;
-    const password = document.getElementById("login-password").value;
-    try {
-      await signInWithEmailAndPassword(auth, email, password);
-      alert("✅ Login successful");
-    } catch (error) {
-      alert("❌ " + error.message);
-    }
-  };
-
-  // Logout function
-  window.logout = async function () {
-    await signOut(auth);
-    alert("👋 Logged out");
-  };
-
-  // Auth state change listener
-  onAuthStateChanged(auth, (user) => {
-    const status = document.getElementById("auth-status");
-    if (user) {
-      status.textContent = `✅ Logged in as ${user.email}`;
-    } else {
-      status.textContent = "❌ Not logged in";
-    }
-  });
-</script>
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/6825a4ac7fef5b1908f9e256/1ir9gmhel';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  </script>
+  <!--End of Tawk.to Script-->
 
 </body>
 </html>
