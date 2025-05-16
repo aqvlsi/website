@@ -4,6 +4,31 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PakCircuits - FPGA, DSP & Embedded Solutions</title>
+  <!-- Firebase SDKs -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.7.3/firebase-app.js";
+  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.7.3/firebase-auth.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyBm6bPIqG_IbI_MQAt9k9X1IVPTbe0_hZs",
+    authDomain: "authweb-591a3.firebaseapp.com",
+    projectId: "authweb-591a3",
+    storageBucket: "authweb-591a3.appspot.com",
+    messagingSenderId: "598690765116",
+    appId: "1:598690765116:web:840345415f07d41c6c2639",
+    measurementId: "G-90GDFQGFHR"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth();
+
+  window.auth = auth;
+  window.signInWithEmailAndPassword = signInWithEmailAndPassword;
+  window.createUserWithEmailAndPassword = createUserWithEmailAndPassword;
+  window.signOut = signOut;
+  window.onAuthStateChanged = onAuthStateChanged;
+</script>
+
   <style>
     body {
       margin: 0;
@@ -40,6 +65,12 @@
     }
 
     nav {
+      <div id="auth-buttons" style="margin-left:auto;">
+  <button onclick="showLogin()">Login</button>
+  <button onclick="showSignup()">Sign Up</button>
+  <button onclick="logout()" style="display:none;" id="logoutBtn">Logout</button>
+</div>
+
       background: rgba(0, 0, 50, 0.85);
       display: flex;
       flex-wrap: wrap;
@@ -193,6 +224,71 @@
     })();
   </script>
   <!--End of Tawk.to Script-->
+<!-- AUTH MODALS -->
+<div id="authModal" style="display:none; position:fixed; top:20%; left:30%; background:#000; padding:20px; border:2px solid #00d1ff; color:white; z-index:1000;">
+  <h3 id="authTitle">Login</h3>
+  <input id="authEmail" type="email" placeholder="Email"><br><br>
+  <input id="authPassword" type="password" placeholder="Password"><br><br>
+  <button onclick="submitAuth()">Submit</button>
+  <button onclick="closeModal()">Cancel</button>
+</div>
+
+<script>
+  let isLogin = true;
+
+  function showLogin() {
+    document.getElementById("authModal").style.display = "block";
+    isLogin = true;
+    document.getElementById("authTitle").innerText = "Login";
+  }
+
+  function showSignup() {
+    document.getElementById("authModal").style.display = "block";
+    isLogin = false;
+    document.getElementById("authTitle").innerText = "Sign Up";
+  }
+
+  function closeModal() {
+    document.getElementById("authModal").style.display = "none";
+  }
+
+  function submitAuth() {
+    const email = document.getElementById("authEmail").value;
+    const pass = document.getElementById("authPassword").value;
+    if (isLogin) {
+      signInWithEmailAndPassword(auth, email, pass)
+        .then(userCred => {
+          alert("Login successful");
+          document.getElementById("logoutBtn").style.display = "inline";
+          closeModal();
+        })
+        .catch(err => alert(err.message));
+    } else {
+      createUserWithEmailAndPassword(auth, email, pass)
+        .then(userCred => {
+          alert("Sign Up successful");
+          document.getElementById("logoutBtn").style.display = "inline";
+          closeModal();
+        })
+        .catch(err => alert(err.message));
+    }
+  }
+
+  function logout() {
+    signOut(auth).then(() => {
+      alert("Logged out");
+      document.getElementById("logoutBtn").style.display = "none";
+    });
+  }
+
+  onAuthStateChanged(auth, user => {
+    if (user) {
+      document.getElementById("logoutBtn").style.display = "inline";
+    } else {
+      document.getElementById("logoutBtn").style.display = "none";
+    }
+  });
+</script>
 
 </body>
 </html>
