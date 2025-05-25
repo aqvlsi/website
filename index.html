@@ -21,7 +21,12 @@
 </head>
 <body>
     <header class="header">
-        <a href="#" class="logo"><img src="./images/image.png" alt=""></a>
+       <<!-- <a href="#" class="logo"><img src="./images/image.png" alt=""></a>  -->>
+  <a href="#" class="logo" style="display: inline-block; margin: 0; padding: 0;">
+  <img src="./images/image.png" alt="PakCircuits Logo" style="height: 100px; display: block; margin: 0; padding: 0;">
+</a>
+
+
         <div class="fas fa-bars"></div>
         <nav class="navbar">
             <ul>
@@ -36,64 +41,80 @@
             </ul>
         </nav>
     </header>
+<section id="home" class="home" style="padding-top: 30px; margin-top: -30px; text-align: center;">
+  <h1 style="font-size: 3.5rem; margin-bottom: 0.5rem;">Pakcircuits.com</h1>
+  <h2 style="font-size: 2.2rem;">Empowering Engineers with Innovative FPGA, DSP, Embedded, and Renewable Energy Solutions</h2>
 
-  <section id="home" class="home">
-      <h1>Pakcircuits.Com</h1>      
-      <h2>Empowering Engineers with Innovative FPGA, DSP, Embedded, and Renewable Energy Solutions</h2>
-    <div class="wave wave1"></div>
-    <div class="wave wave2"></div>
-    <div class="wave wave3"></div>
-  </section>
+  <div class="wave wave1"></div>
+  <div class="wave wave2"></div>
+  <div class="wave wave3"></div>
+</section> <!-- Closing home section -->
 
-  <section id="about" class="about">
-    <h1 class="heading">about us</h1>
-    <div class="row">
-        <div class="content"> 
-            <h2>Engineering Innovation, Simplified. 
-                we offer ready-made and custom projects in FPGA, DSP, HDL, IC Design, UVM Verification, and Renewable Energy.</h2>
-                <a href="#"><button class="btn">Read More</button></a>
-        </div>
+<section id="about" class="about" style="margin-top: 40px;">
+  <h1 class="heading" style="font-size: 28px; margin-bottom: 10px;">About Us</h1>
+  <div class="row">
+    <div class="content"> 
+      <h2 style="font-size: 16px; line-height: 1.4; margin-top: 0;">
+        Engineering Innovation, Simplified. We offer ready-made and custom projects in FPGA, DSP, HDL, IC Design, UVM Verification, and Renewable Energy.
+      </h2>
+      <a href="#"><button class="btn">Read More</button></a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <div class="pt-5 pb-5" style="background-color: #f2f2f2;">
-    <div class="container">
-      <div class="row">
-        <div class="section-head col-sm-12" id="service">
-          <h1>Our Services</h1>
-          <p>We provide expert solutions in FPGA design, DSP, IC design, and renewable energy systems.
-Our offerings include ready-to-use projects, custom development, and professional engineering tutorials.</p>
+
+
+<section id="service" class="pt-5 pb-5" style="background-color: #f2f2f2;">
+  <div class="container">
+    <div class="section-head col-sm-12">
+      <h1>Our Services</h1>
+      <p>We provide expert solutions in FPGA design, DSP, IC design, and renewable energy systems. Our offerings include ready-to-use projects, custom development, and professional engineering tutorials.</p>
+    </div>
+    <div class="row">
+
+      <div class="col-lg-4 col-sm-6 mb-4">
+        <div class="item service-box" style="background: #e7f1ff; padding: 20px; border-radius: 8px; text-align: center;">
+          <span class="icon" style="color: #0d6efd; font-size: 40px;"><i class="fa fa-microchip"></i></span>
+          <h6>FPGA & DSP Design</h6>
+          <p>Custom solutions in Verilog, VHDL, signal processing, and hardware prototyping.</p>
         </div>
-<div class="col-lg-4 col-sm-6">
-  <div class="item"> <span class="icon feature_box_col_one"><i class="fa fa-microchip"></i></span>
-    <h6>FPGA & DSP Design</h6>
-    <p>We specialize in custom FPGA-based solutions and advanced digital signal processing systems for academic and industrial applications.</p>
+      </div>
+
+      <div class="col-lg-4 col-sm-6 mb-4">
+        <div class="item service-box" style="background: #e6f4ea; padding: 20px; border-radius: 8px; text-align: center;">
+          <span class="icon" style="color: #198754; font-size: 40px;"><i class="fa fa-bolt"></i></span>
+          <h6>Renewable Energy Solutions</h6>
+          <p>Solar, wind, hybrid power system design and monitoring.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-sm-6 mb-4">
+        <div class="item service-box" style="background: #fff4e5; padding: 20px; border-radius: 8px; text-align: center;">
+          <span class="icon" style="color: #f0ad4e; font-size: 40px;"><i class="fa fa-microscope"></i></span>
+          <h6>IC Design & Verification</h6>
+          <p>UVM, RTL, and post-layout verification for VLSI and ASIC systems.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-sm-6 mb-4">
+        <div class="item service-box" style="background: #f9e7ff; padding: 20px; border-radius: 8px; text-align: center;">
+          <span class="icon" style="color: #9f5fff; font-size: 40px;"><i class="fa fa-graduation-cap"></i></span>
+          <h6>Professional Training</h6>
+          <p>Engineer-focused tutorials and hands-on workshops for skill development.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-sm-6 mb-4">
+        <div class="item service-box" style="background: #e7f7ff; padding: 20px; border-radius: 8px; text-align: center;">
+          <span class="icon" style="color: #17a2b8; font-size: 40px;"><i class="fa fa-briefcase"></i></span>
+          <h6>Academic & Commercial Projects</h6>
+          <p>Pre-designed and custom FPGA/embedded projects for sale and deployment.</p>
+        </div>
+      </div>
+
+    </div>
   </div>
-</div>
-<div class="col-lg-4 col-sm-6">
-  <div class="item"> <span class="icon feature_box_col_two"><i class="fa fa-cogs"></i></span>
-    <h6>IC Design & Verification</h6>
-    <p>From RTL to functional verification, we deliver VLSI and ASIC solutions using Verilog, SystemVerilog, and UVM methodologies.</p>
-  </div>
-</div>
-<div class="col-lg-4 col-sm-6">
-  <div class="item"> <span class="icon feature_box_col_three"><i class="fa fa-solar-panel"></i></span>
-    <h6>Renewable Energy Solutions</h6>
-    <p>Design and deployment of solar, wind, and hybrid systems with smart monitoring, ideal for sustainable engineering projects.</p>
-  </div>
-</div>
-<div class="col-lg-4 col-sm-6">
-  <div class="item"> <span class="icon feature_box_col_four"><i class="fa fa-book"></i></span>
-    <h6>Professional Tutorials</h6>
-    <p>Hands-on tutorials and video courses for engineers in FPGA, DSP, embedded systems, and IC design to boost industry-ready skills.</p>
-  </div>
-</div>
-<div class="col-lg-4 col-sm-6">
-  <div class="item"> <span class="icon feature_box_col_five"><i class="fa fa-shopping-cart"></i></span>
-    <h6>Ready-to-Use Projects</h6>
-    <p>Buy pre-built academic and industrial-grade projects or request custom project development tailored to your specific needs.</p>
-  </div>
-</div>
+</section>
 
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
